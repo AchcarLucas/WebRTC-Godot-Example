@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b5bfkgtopigf"]
+
+[ext_resource type="Script" uid="uid://b7a364hgb6g0e" path="res://scripts/managers/network/rpc/test/TestRPC.gd" id="1_tay1n"]
+
+[node name="TestRPC" type="Node" unique_id=167291867]
+script = ExtResource("1_tay1n")

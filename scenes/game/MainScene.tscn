@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bwejsu0erfsiw"]
+
+[ext_resource type="Script" uid="uid://bvoi8vx7bb8fb" path="res://scripts/game/Main.gd" id="1_5f1r4"]
+
+[node name="MainScene" type="Control" unique_id=747409095]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5f1r4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=869050816]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -314.0
+offset_top = -43.375
+offset_right = 314.0
+offset_bottom = 43.375
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="DoServerButton" type="Button" parent="VBoxContainer" unique_id=1152807084]
+layout_mode = 2
+text = "I want to be a Server"
+
+[node name="DoClientButton" type="Button" parent="VBoxContainer" unique_id=1927749285]
+layout_mode = 2
+text = "I want to be a Client"
+
+[connection signal="pressed" from="VBoxContainer/DoServerButton" to="." method="_on_do_server_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/DoClientButton" to="." method="_on_do_client_button_pressed"]

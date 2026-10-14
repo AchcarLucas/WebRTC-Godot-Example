@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dtjsc4mrhn3ff"]
+
+[ext_resource type="Script" uid="uid://diiaa6q5edr82" path="res://scripts/managers/network/client/WebRTC_ClientManager.gd" id="1_ff6nf"]
+
+[node name="WebRTC_ClientManager" type="Node" unique_id=1618082996]
+script = ExtResource("1_ff6nf")

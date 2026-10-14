@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://r7i4mrjvfkhs"]
+
+[ext_resource type="Script" uid="uid://cff745tcs2h54" path="res://scripts/managers/network/rpc/chat/ChatRPC.gd" id="1_bdjaf"]
+
+[node name="ChatRPC" type="Node" unique_id=2076902003]
+script = ExtResource("1_bdjaf")

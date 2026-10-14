@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cetfarkusux1a"]
+
+[ext_resource type="Script" uid="uid://bjw34o2e75fey" path="res://scripts/game/Server.gd" id="1_3bx3t"]
+
+[node name="ServerScene" type="Control" unique_id=308339089]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3bx3t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1023096092]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -335.0
+offset_top = -586.5
+offset_right = 335.0
+offset_bottom = 586.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="GodotVersionLabel" type="Label" parent="VBoxContainer" unique_id=1912708846]
+layout_mode = 2
+text = "Server WebRTC — Godot 4.7"
+
+[node name="ClientIDLineEdit" type="LineEdit" parent="VBoxContainer" unique_id=1302552011]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "2"
+placeholder_text = "Client ID"
+alignment = 1
+
+[node name="CreateOfferButton" type="Button" parent="VBoxContainer" unique_id=1340074023]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Create Offer"
+
+[node name="JSONServerOfferLabel" type="Label" parent="VBoxContainer" unique_id=728909211]
+layout_mode = 2
+text = "JSON Server Offer"
+
+[node name="JSONServerOfferTextEdit" type="TextEdit" parent="VBoxContainer" unique_id=1161046259]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+placeholder_text = "Copy the JSON server offer and send it to the client."
+editable = false
+
+[node name="JSONClientAnswerLabel" type="Label" parent="VBoxContainer" unique_id=10619495]
+layout_mode = 2
+text = "JSON Client Answer"
+
+[node name="JSONClientAnswerTextEdit" type="TextEdit" parent="VBoxContainer" unique_id=1217443504]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+placeholder_text = "Paste the JSON client answer here."
+
+[node name="ApplyButton" type="Button" parent="VBoxContainer" unique_id=1878639264]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Apply Answer and Connect"
+
+[node name="ChatMessageTextEdit" type="TextEdit" parent="VBoxContainer" unique_id=1175726075]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+placeholder_text = "Chat Message"
+editable = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1268236538]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="ChatInputLineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=190339825]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Text to send"
+
+[node name="ChatSendMessageButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=2078246191]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Send"
+
+[connection signal="pressed" from="VBoxContainer/CreateOfferButton" to="." method="_on_create_offer_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ApplyButton" to="." method="_on_apply_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ChatSendMessageButton" to="." method="_on_chat_send_message_button_pressed"]
