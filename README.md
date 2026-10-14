@@ -2,6 +2,12 @@
 
 A Godot demo of peer-to-peer multiplayer using WebRTC. It establishes a real WebRTC connection while keeping signaling manual: exchange SDP and ICE data as JSON by copy and paste. There is no signaling server.
 
+## Screenshots
+
+| Server | Multiple clients |
+| --- | --- |
+| <img src="image/image-1.png" alt="WebRTC server with the offer, answer, and chat interface" width="100%"> | <img src="image/image-2.png" alt="Three WebRTC clients connected to the server" width="100%"> |
+
 ## Requirements
 
 - Godot 4.7, the version configured by this project.
