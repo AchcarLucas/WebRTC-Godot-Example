@@ -79,7 +79,7 @@ func _on_client_connected(id: int) -> void:
 	DebuggingHelper.debug("Client Connected - Client ID <%s>" % [id], CLASS_NAME)
 
 	if multiplayer.is_server():
-		chat_rpc.send_message.rpc("Client <%d> sucessfully connected to the server." % [id])
+		chat_rpc.send_message.rpc("Client <%d> successfully connected to the server." % [id])
 
 func _on_client_disconnected(id: int) -> void:
 	print(" - %s - %d" % [get_stack()[0]["function"], get_instance_id()])
