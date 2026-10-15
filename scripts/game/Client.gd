@@ -104,7 +104,7 @@ func _on_client_disconnected(id: int) -> void:
 
 func _on_connected_to_server() -> void:
 	print(" - %s - %d" % [get_stack()[0]["function"], get_instance_id()])
-	DebuggingHelper.debug("Client successfully connecting to the host server.", CLASS_NAME)
+	DebuggingHelper.debug("Client successfully connected to the host server.", CLASS_NAME)
 
 	_append_chat("You have been connected.")
 
