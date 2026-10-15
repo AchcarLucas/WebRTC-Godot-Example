@@ -79,14 +79,14 @@ func _on_client_connected(id: int) -> void:
 	DebuggingHelper.debug("Client Connected - Client ID <%s>" % [id], CLASS_NAME)
 
 	if multiplayer.is_server():
-		chat_rpc.send_message.rpc("Client <%d> has joined the connection." % [id])
+		chat_rpc.send_message.rpc("Client <%d> sucessfully connected to the server." % [id])
 
 func _on_client_disconnected(id: int) -> void:
 	print(" - %s - %d" % [get_stack()[0]["function"], get_instance_id()])
 	DebuggingHelper.debug("Client Disconnected - Client ID <%s>" % [id], CLASS_NAME)
 
 	if multiplayer.is_server():
-		chat_rpc.send_message.rpc("Client <%d> has joined the disconnected." % [id])
+		chat_rpc.send_message.rpc("Client <%d> disconnected from server." % [id])
 
 	webrtc_server_manager.destroy_client_id(id)
 
