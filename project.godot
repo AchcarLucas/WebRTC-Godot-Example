@@ -13,7 +13,7 @@ config_version=5
 config/name="WebRTC Godot Example"
 run/main_scene="uid://bwejsu0erfsiw"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://6k2eruh83yl0"
 
 [autoload]
 
