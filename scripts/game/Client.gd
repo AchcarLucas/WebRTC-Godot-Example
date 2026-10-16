@@ -37,6 +37,46 @@ func _ready() -> void:
 		"credential": "pass_b"
 	})
 
+	##########################################
+	# STUN|TURN do Metered Server (Test)
+	##########################################
+
+	webrtc_client_manager.add_ice_stun("stun:stun.relay.metered.ca:80")
+
+	webrtc_client_manager.add_ice_turn({
+		"urls": [
+			"turn:global.relay.metered.ca:80"
+		],
+		"username": "username",
+		"credential": "credential"
+	})
+
+	webrtc_client_manager.add_ice_turn({
+		"urls": [
+			"turn:global.relay.metered.ca:80?transport=tcp"
+		],
+		"username": "username",
+		"credential": "credential"
+	})
+
+	webrtc_client_manager.add_ice_turn({
+		"urls": [
+			"turn:global.relay.metered.ca:443"
+		],
+		"username": "username",
+		"credential": "credential"
+	})
+
+	webrtc_client_manager.add_ice_turn({
+		"urls": [
+			"turns:global.relay.metered.ca:443?transport=tcp"
+		],
+		"username": "username",
+		"credential": "credential"
+	})
+
+	##########################################
+
 	webrtc_client_manager.offer_completed.connect(_on_offer_completed)
 	webrtc_client_manager.answer_completed.connect(_on_answer_completed)
 
