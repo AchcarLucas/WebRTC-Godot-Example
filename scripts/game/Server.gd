@@ -42,7 +42,7 @@ func _ready() -> void:
 	##########################################
 	# STUN|TURN do Metered Server (Test)
 	##########################################
-
+	'''
 	webrtc_server_manager.add_ice_stun("stun:stun.relay.metered.ca:80")
 
 	webrtc_server_manager.add_ice_turn({
@@ -76,7 +76,7 @@ func _ready() -> void:
 		"username": "username",
 		"credential": "credential"
 	})
-
+	'''
 	##########################################
 
 	webrtc_server_manager.offer_completed.connect(_on_offer_completed)
