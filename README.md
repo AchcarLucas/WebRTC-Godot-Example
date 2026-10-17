@@ -1,4 +1,4 @@
-# WebRTC Godot Example
+# WebRTC - Godot Example
 
 A Godot demo of peer-to-peer multiplayer using WebRTC. It establishes a real WebRTC connection while keeping signaling manual: exchange SDP and ICE data as JSON by copy and paste. There is no signaling server.
 
